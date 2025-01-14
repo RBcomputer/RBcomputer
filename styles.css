@@ -569,20 +569,44 @@ nav {
 }
 
 .reviews-slider {
-   display: flex;
-   transition: transform 0.5s ease;
-   animation: slide 30s linear infinite;
+    display: flex;
+    gap: 2rem;
+    width: max-content;
 }
 
 .review-card {
-   flex: 0 0 300px;
-   margin: 0 1rem;
-   padding: 2rem;
-   background: #f8f9fa;
-   border-radius: 10px;
-   box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    flex: 0 0 300px;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
 }
 
+@media (max-width: 768px) {
+    .review-card {
+        flex: 0 0 280px;
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-25%); /* Cambiato da -50% a -25% per compensare la quadrupla duplicazione */
+    }
+}
+
+ /* Aggiungiamo media query specifiche per mobile */
+@media (max-width: 768px) {
+    .review-card {
+        flex: 0 0 calc(100vw - 4rem); /* Larghezza basata sulla viewport minus padding */
+    }
+    
+    .reviews-container {
+        padding: 0 1rem;
+    }
+ }
 .review-source {
    display: flex;
    align-items: center;
@@ -611,12 +635,12 @@ nav {
 }
 
 @keyframes slide {
-   0% {
-       transform: translateX(0);
-   }
-   100% {
-       transform: translateX(-100%);
-   }
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-20%);
+    }
 }
 
 /* Responsive */
@@ -634,20 +658,34 @@ nav {
 .reviews-controls {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem; /* Ridotto il gap per accomodare il terzo bottone */
     margin-top: 2rem;
 }
 
 .review-control {
-    background: none;
+    background: #3498db;
     border: none;
-    color: #3498db;
-    font-size: 1.5rem;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1rem;
     cursor: pointer;
-    transition: color 0.3s;
-    padding: 0.5rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .review-control:hover {
-    color: #2980b9;
+    background: #2980b9;
+    transform: scale(1.1);
+}
+
+.review-control:active {
+    transform: scale(0.95);
+}
+
+.review-control i {
+    font-size: 1rem;
 }
