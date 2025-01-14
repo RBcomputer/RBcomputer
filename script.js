@@ -93,3 +93,18 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScroll = currentScroll;
     });
 });
+// Aggiungi dopo il codice esistente nel DOMContentLoaded
+
+// Duplica le recensioni per lo scorrimento continuo
+const reviewsSlider = document.querySelector('.reviews-slider');
+if (reviewsSlider) {
+    const reviews = reviewsSlider.innerHTML;
+    reviewsSlider.innerHTML = reviews + reviews;
+}
+
+// Resetta l'animazione quando finisce
+reviewsSlider.addEventListener('animationend', () => {
+    reviewsSlider.style.animation = 'none';
+    void reviewsSlider.offsetWidth; // Trigger reflow
+    reviewsSlider.style.animation = 'slide 30s linear infinite';
+});
