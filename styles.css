@@ -11,15 +11,12 @@ body {
 
 /* Navigazione */
 nav {
-    position: fixed;
-    width: 100%;
-    padding: 1rem 2rem;
-    background: rgba(0,0,0,0.9);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-}
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        backdrop-filter: blur(10px);
+    }
 
 .logo-container {
     display: flex;
@@ -632,4 +629,25 @@ nav {
 /* Pausa animazione al passaggio del mouse */
 .reviews-slider:hover {
    animation-play-state: paused;
+}
+
+.reviews-controls {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.review-control {
+    background: none;
+    border: none;
+    color: #3498db;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 0.5rem;
+}
+
+.review-control:hover {
+    color: #2980b9;
 }
