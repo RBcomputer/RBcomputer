@@ -50,20 +50,15 @@ nav {
     color: #3498db;
 }
 
-/* Hero Section */
-.hero {
-    height: 100vh;
-    padding-top: 80px;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                url('https://images.unsplash.com/photo-1516321497487-e288fb19713f');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+/* Mobile Menu Nuovo */
+.mobile-menu {
+    display: none;
+    font-size: 1.5rem;
     color: white;
+    cursor: pointer;
+    z-index: 1001;
 }
+
 
 .hero-content {
     max-width: 800px;
@@ -311,24 +306,6 @@ nav {
     color: #27ae60;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .service-methods {
-        flex-direction: column;
-    }
-    
-    .coverage-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .method {
-        width: 100%;
-    }
-    
-    .method-divider {
-        margin: 1rem 0;
-    }
-}
 /* Contatti Section */
 .contacts {
     background: #f8f9fa;
@@ -411,8 +388,132 @@ nav {
     color: #2980b9;
 }
 
+/* Navigazione */
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    height: 70px; /* Altezza fissa della nav */
+}
+
+/* Hero Section */
+.hero {
+    min-height: 100vh;
+    padding-top: 70px; /* Stesso valore dell'altezza della nav */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('https://images.unsplash.com/photo-1516321497487-e288fb19713f');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
 @media (max-width: 768px) {
+    nav {
+        padding: 1rem;
+        height: 70px;
+    }
+
+    .mobile-menu {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 70px; /* Stesso valore dell'altezza della nav */
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: rgb(0,0,0); /* Cambiato da rgba a rgb per maggiore opacità */
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1rem;
+        color: white;
+        font-size: 1.2rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        padding: 1rem;
+    }
+
+    .service-methods {
+        flex-direction: column;
+    }
+    
+    .coverage-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .method {
+        width: 100%;
+    }
+    
+    .method-divider {
+        margin: 1rem 0;
+    }
+
+    .hero-content {
+        padding: 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .pickup-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .locations-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .contact-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .social-links {
+        gap: 1rem;
+    }
+
     .contacts-container {
+        padding: 1.5rem;
+    }
+
+    section {
         padding: 2rem 1rem;
     }
 
@@ -420,8 +521,35 @@ nav {
         flex-direction: column;
         text-align: center;
     }
+}
+.technician-profile {
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
-    .social-links {
-        margin-top: 2rem;
+.technician-profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #3498db;
+}
+
+.contact-details {
+    margin: 2rem 0;
+}
+
+.contact-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .contact-row {
+        flex-direction: column;
+        gap: 1rem;
     }
 }
