@@ -689,3 +689,7 @@ nav {
 .review-control i {
     font-size: 1rem;
 }
+.pickup-points h2 {
+    text-align: center;
+    margin-bottom: 3rem; /* per mantenere lo spazio sotto il titolo */
+}
