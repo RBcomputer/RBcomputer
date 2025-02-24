@@ -1,7 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /privacy-policy.html
-Sitemap: https://rbcomputer.netlify.app/sitemap.xml
-
-User-agent: Googlebot
-Allow: /
