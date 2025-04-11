@@ -751,3 +751,66 @@ nav {
         justify-content: center;
     }
 }
+
+/* Sostituisci lo stile esistente del view-counter con questo */
+#view-counter {
+    position: static;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    padding: 4px 8px;
+    margin: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+#view-counter:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+/* Aggiungere questo stile per il footer se non esiste già */
+footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Versione mobile */
+@media (max-width: 768px) {
+    #view-counter {
+        bottom: 10px;
+        right: 10px;
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+/* Aggiorna lo stile del footer e del contatore */
+footer {
+    background-color: #000;
+    padding: 8px;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#view-counter {
+    display: inline;
+    color: rgba(255, 255, 255, 0.2); /* Reso ancora più trasparente */
+    margin-left: 5px;
+    font-size: 11px; /* Ridotto leggermente */
+}
+
+footer p {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    footer {
+        padding: 8px;
+        font-size: 11px;
+    }
+}
