@@ -103,6 +103,16 @@ nav {
     background: #2980b9;
 }
 
+/* Stile per il pulsante WhatsApp */
+.cta-button.whatsapp {
+    background-color: #25D366;
+    margin-left: 10px;
+}
+
+.cta-button.whatsapp:hover {
+    background-color: #128C7E;
+}
+
 .qr-whatsapp {
     text-align: center;
 }
@@ -200,27 +210,33 @@ nav {
     padding: 0 1rem;
 }
 
-.pickup-card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.pickup-card:hover {
-    transform: translateY(-5px);
-}
-
+/* Modifica alla classe pickup-image per spostare l'immagine in alto */
 .pickup-image {
     height: 250px;
     overflow: hidden;
+    margin-top: -30px; /* Valore negativo per spostare l'immagine in alto */
+    position: relative; /* Aggiunto per gestire meglio il posizionamento */
 }
 
 .pickup-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top; /* Mantiene visibile la parte superiore dell'immagine */
+}
+
+/* Adattiamo il bordo per compensare */
+.pickup-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    padding-top: 30px; /* Aggiungiamo padding in alto per compensare il margin negativo */
+}
+
+.pickup-card:hover {
+    transform: translateY(-5px);
 }
 
 .pickup-info {
@@ -813,4 +829,81 @@ footer p {
         padding: 8px;
         font-size: 11px;
     }
+}
+
+/* Stili per la sezione tecnologie supportate */
+.tech-support {
+    background-color: #f8f9fa;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.tech-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.tech-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+}
+
+.tech-logo img {
+    height: 70px;
+    width: auto;
+    margin-bottom: 10px;
+    filter: grayscale(20%);
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.tech-logo:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.tech-logo span {
+    font-weight: 500;
+}
+
+/* Responsive per dispositivi mobili */
+@media (max-width: 768px) {
+    .tech-logo {
+        width: 90px;
+    }
+    
+    .tech-logo img {
+        height: 50px;
+    }
+    
+    .cta-button.whatsapp {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+/* Aggiungi questi stili per i benefici del servizio a domicilio */
+.method-benefits {
+    text-align: left;
+    margin-top: 15px;
+    list-style-position: inside;
+    padding-left: 10px;
+}
+
+.method-benefits li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.method-benefits li:before {
+    content: "✓";
+    color: #3498db;
+    position: absolute;
+    left: -5px;
+    font-weight: bold;
 }
