@@ -22,7 +22,7 @@
           "description": "Assistenza computer professionale a Ladispoli",
           "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Ladispoli",
+            "addressLocality": "Ladispoli, Cerveteri,"
             "addressRegion": "RM",
             "addressCountry": "IT"
           },
@@ -32,7 +32,8 @@
         </script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-    </head>
+    <script src="script.js"></script>
+</head>
 <body>
     <!-- Barra di navigazione -->
     <nav>
@@ -46,6 +47,7 @@
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#servizi">Servizi</a>
+            <a href="#tecnologie">Tecnologie</a>
             <a href="#recensioni">Recensioni</a>
             <a href="#punti-ritiro">Punti Ritiro</a>
             <a href="#copertura">Copertura</a>
@@ -63,6 +65,10 @@
                 <a href="tel:3392334249" class="cta-button phone">
                     <i class="fas fa-phone"></i>
                     339.2334249
+                </a>
+                <a href="https://wa.me/393392334249" class="cta-button whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    Chatta ora
                 </a>
                 <div class="qr-whatsapp">
                     <p>Scansiona per WhatsApp</p>
@@ -95,6 +101,53 @@
                 <i class="fas fa-id-card"></i>
                 <h3>Supporto Servizi Digitali</h3>
                 <p>Assistenza per SPID, Aruba e fatturazione elettronica</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-home"></i><i class="fas fa-wifi" style="font-size: 0.7em; margin-left: -0.5em;"></i>
+                <h3>Domotica Smart Home</h3>
+                <p>Installazione e configurazione di sistemi di domotica e gestione dispositivi smart home</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-robot"></i>
+                <h3>Supporto AI e ChatGPT</h3>
+                <p>Formazione e supporto all'utilizzo di intelligenza artificiale e sistemi basati su ChatGPT e non solo</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Cybersecurity</h3>
+                <p>Protezione dei tuoi dispositivi dalle minacce informatiche e configurazione password sicure</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-wifi"></i>
+                <h3>Ottimizzazione Rete Wi-Fi</h3>
+                <p>Miglioramento della copertura e della velocità della rete domestica o aziendale</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tecnologie Supportate -->
+    <section id="tecnologie" class="tech-support">
+        <h2>Tecnologie Supportate</h2>
+        <div class="tech-logos">
+            <div class="tech-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg" alt="Windows">
+                <span>Windows</span>
+            </div>
+            <div class="tech-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+                <span>Apple</span>
+            </div>
+            <div class="tech-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux">
+                <span>Linux</span>
+            </div>
+            <div class="tech-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Android_robot.svg" alt="Android">
+                <span>Android</span>
+            </div>
+            <div class="tech-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/IOS_logo.svg" alt="iOS">
+                <span>iOS</span>
             </div>
         </div>
     </section>
@@ -230,7 +283,9 @@
             <div class="method">
                 <i class="fas fa-home"></i>
                 <h3>A Domicilio</h3>
-                <p>Servizio di assistenza direttamente a casa tua</p>
+                <p><strong>Servizio a Casa Tua</strong></p>
+                <p>Assistenza professionale a domicilio, se necessario, ritiro e consegna gratuiti</p>
+
             </div>
             <div class="method-divider">oppure</div>
             <div class="method">
@@ -242,19 +297,6 @@
         </div>
 
         <div class="pickup-grid">
-            <div class="pickup-card">
-                <div class="pickup-image">
-                    <img src="https://i.imgur.com/DJdo2gU.jpg" alt="Zuillo Sas">
-                </div>
-                <div class="pickup-info">
-                    <h3>Zuillo Sas</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Via Filippo Moretti 13, Ladispoli (RM)</p>
-                    <a href="https://g.co/kgs/ouZS2y1" class="maps-link" target="_blank">
-                        <i class="fas fa-map"></i> Vedi su Google Maps
-                    </a>
-                </div>
-            </div>
-
             <div class="pickup-card">
                 <div class="pickup-image">
                     <img src="https://i.imgur.com/zx0kiif.jpg" alt="Cartelle di Rita Elena">
@@ -363,8 +405,8 @@
     </div>
 </div>
 <footer>
-    <p>©2024 RBcomputer di Roberto Bonifazi<span id="view-counter">0</span></p>
+    <p>© 2025 RBcomputer di Roberto Bonifazi - P.IVA: 12345678910</p>
+    <span id="view-counter"></span>
 </footer>
-    <script src="script.js"></script>
 </body>
 </html>
