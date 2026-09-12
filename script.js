@@ -98,7 +98,7 @@ function updatePageViews() {
         const views = snapshot.val();
         const viewCounter = document.getElementById('view-counter');
         if (viewCounter) {
-            viewCounter.textContent = `000 ${views || 0} VS`;
+            viewCounter.textContent = `000 ${views || 0} (v.12)`;
         }
     });
 }
